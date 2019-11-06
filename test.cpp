@@ -1,19 +1,15 @@
 #include <iostream>
-#include <vector>
 
-int main(){
-  int n;
-  std::cin >> n;
-  std::vector <int> a;
-  for (int i = 0; i < n; i++) {
-    int temp;
-    std::cin >> temp;
-    if (i % 2 == 0) {
-      a.push_back(temp);
-    } 
+int main() {
+  int a, i;
+  std::cout << " " << std::endl;
+  std::cin >> a;
+  for(i = 2; i < a; i++){
+    if (a % i == 0) {
+      std::cout << "ne prostoe" << std::endl;
+    } else {
+      std::cout << "prostoe" << std::endl;
+    }
   }
-  for (int i = 0; i <= a.size() - 1; i ++) {
-    std::cout << a[i] << " ";
-  }
-return 0;
+  return 0;
 }
