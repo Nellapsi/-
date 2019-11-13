@@ -1,8 +1,7 @@
 #include <iostream>
 
-int main () {
-    int i, k, c, a, n;
-    std::cin >> n;
+int fib (int n) {
+    int i, k, c, a;
     k = 0;
     c = 1;
     a = 0;
@@ -16,7 +15,13 @@ int main () {
         a = c + k;
         c = k;
         k = a;
-    }
-    std::cout << a << std::endl; 
+    } 
+    return a;
+}
+
+int main () {
+    int n;
+    std::cin >> n;
+    std::cout << fib (n) <<std::endl;
     return 0;
 }
