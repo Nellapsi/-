@@ -15,7 +15,7 @@ int main(){
     }
     for(i = 3; i <= n; i += 2) {
         std::cout<<std::endl;
-        for(k = n - 3; k >= (i - 2) / 2; k--) {
+        for(k = n / 2; k >= (i - 2) / 2; k--) {
             std::cout<<" ";
         }
         for(j = 1; j <= i; j++) {
