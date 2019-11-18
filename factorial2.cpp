@@ -8,9 +8,8 @@ int factorial (int n) {
 }
 
 int main () {
-    int n, k;
+    int n;
     std::cin >> n;
-    k = factorial (n);
-    std::cout << k << std::endl;
+    std::cout << factorial (n) << std::endl;
     return 0;
 }

@@ -8,9 +8,8 @@ int fib (int n) {
 }
 
 int main () {
-    int n, k;
+    int n;
     std::cin >> n;
-    k = fib (n);
-    std::cout << k << std::endl;
+    std::cout << fib (n) << std::endl;
     return 0;
 }
