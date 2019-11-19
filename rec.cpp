@@ -1,15 +1,15 @@
 #include <iostream> 
 
-int rec (int n) {
-    if (n < 1) {
-        return n;
-    }
-    return rec (n) % 10;
+void rec (int n) {
+    if (n / 10 != 0) {
+        std::cout << n % 10 << std::endl;
+        return rec (n / 10);
+    } else std::cout << n;
 }
 
 int main () {
     int n;
     std::cin >> n;
-    std::cout << rec (n);
+    rec (n);
     return 0;
 }
