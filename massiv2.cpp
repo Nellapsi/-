@@ -6,8 +6,9 @@
 
 int main () {
     std::srand (time (nullptr));
-    int b, n, i, k;
-    k = 0;
+    int b, n, i;
+    bool found;
+    found = false;
     std::cin >> b;
     std::vector <int> a (b);
     for (i = 0; i < b; i++) {  
@@ -18,11 +19,11 @@ int main () {
     for(int j = 0; j < b; j++) {
         if (n == a[j]){
             std::cout << "pervi raz chiclo bilo v " << j << " elemente" << std::endl;
-            k = 1;
+            found = true;
             break;
         }
     }
-    if (k == 0) {
+    if (!found) {
         std::cout << "takogo chisla net" << std::endl;
     }
     return 0;
