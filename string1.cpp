@@ -2,20 +2,41 @@
 #include <string> 
 
 int main () {
+    int i, j, k, y;
     std::string b;
     std::string a;
-    std::cin >> a;
-    int k = a.size ();
-    for (int i = 0; i < k; i++ ) {
-        if (a [i] != ' ') {
-            b [i] = a [i];
-            std::cout << "a";
-        } else {
-            k--;
+    std::cin >> a;    
+    bool c = true;
+    i = 0;
+    j = a.size ();
+    while (i < a.size () && c) {
+        if (a [i] == 0) {
+            i++;
+            continue;
+        // } else {
+        //     bool y = true;
+        //     while (c && y) {
+        //         if (a [j] == 0) {
+        //             a [j--];
+        //             continue;
+        //         } else {
+        //             if (a [j] == a [i]) {
+        //                 a [j--];
+        //                 y = false;
+        //             } else {
+        //                 y = false;
+        //                 c = false;
+        //             }
+        //         }
+        //     } 
+            i++;
         }
     }
-    for (int i = 0; i < b.size (); i++) {
-        std::cout << b [i];
+
+    if (c = true) {
+        std::cout << "polindrom" << std::endl;
+    } else {
+        std::cout << "Net" << std::endl;
     }
     return 0;
 }   
