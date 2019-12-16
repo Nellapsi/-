@@ -3,7 +3,8 @@
 
 int main () {
     std::string a;
-    std::cin >> a;
+    //std::cin >> a;
+    std::getline(std::cin, a);
     int i, j;
     bool c = true;
     i = 0;
@@ -17,11 +18,12 @@ int main () {
         }
         if (toupper(a [i]) != toupper(a [j])) {
             c = false; 
+            break;
         }
         i++;
         j--;
     }
-    if (c == true) {
+    if (c) {
         std::cout << "da" << std::endl;
     } else {
         std::cout << "net" << std::endl;

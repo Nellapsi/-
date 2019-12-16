@@ -11,7 +11,7 @@ int main () {
     std::srand (time (nullptr));
     std::vector <int> a (b);
     for (int i = 0; i < b; i++) {
-        a [i] = rand()  % (10 - 1 + 1) + 1; 
+        a [i] = rand()  % (1000 - 1 + 1) + 1; 
     }
 
     std::sort(a.begin (), a.end ());
@@ -25,24 +25,25 @@ int main () {
     
     bool t = false;
     v = a.size ();
+    int f = 1;
     while (!t) {
         s = v / 2;
         if (c < a [s]) {
             v = s;
         } else if (c > a [s]) {
             v = s + a.size ();
-        } else if ( c == a [s]) {
-            d = s;
-            for (int i = s;;i--) {
-                if (c != a [i]) {
-                    t = true;
-                    break;
-                } else {
-                    d = i;
-                }
-            }
+        } else {
+            std::cout << s << std::endl;
+            break;
+        }
+        f++;
+        if (f > 7) {
+            f = true;
         }
     }
-    std::cout << d;
+    if (f) {
+    std::cout << "net" << std::endl;
+    }
+    std::cout << f;
     return 0;
 }
