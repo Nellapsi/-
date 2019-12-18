@@ -3,14 +3,11 @@
 #include <vector> 
 
 
-int main () {
-    int q;
+void slovo (int q) {
     std::string a [] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
     std::string b [] = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
     std::string c [] = {"hundred", "thousand", "million"};
     std::string v [] = {"Ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "eventeen", "eighteen", "nineteen"};
-    std::cin >> q;
-   
     if (q < 10) {
         std::cout << a [q] << std::endl;
     } else if (q < 20) {
@@ -20,5 +17,15 @@ int main () {
     } else if (q < 1000) {
         std::cout << a [q / 100] << " " << c [0] << " " << b [(q % 100) / 10] << " " << a [q % 10];
     }
+}
+
+
+
+int main () {
+    int q;
+    std::cin >> q;
+    if (q < 1000) {
+        slovo (q);
+    } else if ()
     return 0;
 }
